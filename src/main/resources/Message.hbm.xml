@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	'_//Hibernate/Hibernate Mapping DTD 3.0//EN'
+	'http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd'>
+	
+<hibernate-mapping>
+	<class entity-name='amu.m2sir.malodumont.beans.Message' name='amu.m2sir.malodumont.beans.Message' table='MESSAGE' dynamic-update='false' dynamic-insert='false'>
+		<cache usage="read-write"/>
+		<id name='id' column='ID' type='java.lang.Long'>
+			<generator class='increment'></generator>
+		</id>
+		<property name='contenu' type='java.lang.String' update='true' insert='true'
+				access='property' column='contenu'/>
+		<property name='date' type='java.lang.String' update='true' insert='true'
+				access='property' column='date'/>
+		<property name='auteur' type='java.lang.String' update='true' insert='true'
+				access='property' column='auteur'/>
+	</class>
+</hibernate-mapping>

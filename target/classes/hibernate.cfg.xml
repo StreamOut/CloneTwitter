@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	'_//Hibernate/Hibernate Configuration DTD//EN'
+	'http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd'>
+<hibernate-configuration>
+	<session-factory>
+		<property name='connection.driver_class'>org.hsqldb.jdbcDriver</property>
+		<property name='connection.url'>jdbc:hsqldb:hsql://localhost/mabdd</property>
+		<property name='connection.username'>sa</property>
+		<property name='connection.password'></property>
+		
+		<property name='connection.pool_size'>1</property>
+		
+		<property name='dialect'>org.hibernate.dialect.HSQLDialect</property>
+		
+		<property name='current_session_context_class'>thread</property>
+		
+		<property name='hibernate.cache.use_second_level_cache'>false</property>
+		<property name='hibernate.cache.use_query_cache'>false</property>
+		
+		<property name='cache.provider_class'>org.hibernate.cache.NoCacheProvider</property>
+		
+		<property name='show_sql'>false</property>
+		
+		<mapping class='amu.m2sir.malodumont.beans.Message' resource='Message.hbm.xml'/>
+		
+		<mapping class='amu.m2sir.malodumont.beans.User' resource='User.hbm.xml'/>
+		
+		<mapping class='amu.m2sir.malodumont.beans.Like' resource='Like.hbm.xml'/>
+	</session-factory>
+</hibernate-configuration>	

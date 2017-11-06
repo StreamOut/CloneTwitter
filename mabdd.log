@@ -1,0 +1,28 @@
+/*C15*/SET SCHEMA PUBLIC
+CREATE TABLE IF NOT EXISTS likes (id int, messageId int, likeur varchar(255))
+CREATE TABLE IF NOT EXISTS message (id int, contenu varchar(255), date varchar(255), auteur varchar(255))
+CREATE TABLE IF NOT EXISTS user (mail varchar(255), pwd varchar(255))
+/*C17*/SET SCHEMA PUBLIC
+CREATE TABLE IF NOT EXISTS likes (id int, messageId int, likeur varchar(255))
+CREATE TABLE IF NOT EXISTS message (id int, contenu varchar(255), date varchar(255), auteur varchar(255))
+CREATE TABLE IF NOT EXISTS user (mail varchar(255), pwd varchar(255))
+/*C15*/DISCONNECT
+/*C17*/DISCONNECT
+/*C14*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C16*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C19*/SET SCHEMA PUBLIC
+CREATE TABLE IF NOT EXISTS likes (id int, messageId int, likeur varchar(255))
+CREATE TABLE IF NOT EXISTS message (id int, contenu varchar(255), date varchar(255), auteur varchar(255))
+CREATE TABLE IF NOT EXISTS user (mail varchar(255), pwd varchar(255))
+/*C21*/SET SCHEMA PUBLIC
+CREATE TABLE IF NOT EXISTS likes (id int, messageId int, likeur varchar(255))
+CREATE TABLE IF NOT EXISTS message (id int, contenu varchar(255), date varchar(255), auteur varchar(255))
+CREATE TABLE IF NOT EXISTS user (mail varchar(255), pwd varchar(255))
+DISCONNECT
+/*C19*/DISCONNECT
+/*C18*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C20*/SET SCHEMA PUBLIC
+DISCONNECT

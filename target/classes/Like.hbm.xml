@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	'_//Hibernate/Hibernate Mapping DTD 3.0//EN'
+	'http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd'>
+	
+<hibernate-mapping>
+	<class entity-name='amu.m2sir.malodumont.beans.Like' name='amu.m2sir.malodumont.beans.Like' table='LIKES' dynamic-update='false' dynamic-insert='false'>
+		<cache usage="read-write"/>
+		<id name='id' column='ID' type='java.lang.Long'>
+			<generator class='increment'></generator>
+		</id>
+		<property name='messageId' type='java.lang.Long' update='true' insert='true'
+				access='property' column='messageId'/>
+		<property name='likeur' type='java.lang.String' update='true' insert='true'
+				access='property' column='likeur'/>
+	</class>
+</hibernate-mapping>

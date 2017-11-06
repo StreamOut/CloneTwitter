@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	'_//Hibernate/Hibernate Mapping DTD 3.0//EN'
+	'http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd'>
+	
+<hibernate-mapping>
+	<class entity-name='beans.Message' name='beans.Message' table='TABLEDUBEAN' dynamic-update='false' dynamic-insert='false'>
+		<cache usage="read-write"/>
+		<id name='id' column='ID' type='java.lang.long'>
+			<generator class='increment'></generator>
+		</id>
+		<property name='identifiant' type='java.lang.String' update='true' insert='true'
+				access='property' column='identifiant'/>
+		<property name='contenu' type='java.lang.String' update='true' insert='true'
+				access='property' column='contenu'/>
+		<property name='date' type='java.lang.String' update='true' insert='true'
+				access='property' column='date'/>
+		<property name='like' type='java.lang.Boolean' update='true' insert='true'
+				access='property' column='like'/>
+	</class>
+</hibernate-mapping>

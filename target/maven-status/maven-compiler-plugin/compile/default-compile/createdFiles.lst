@@ -1,0 +1,11 @@
+amu/m2sir/malodumont/beans/Message.class
+amu/m2sir/malodumont/beans/User.class
+amu/m2sir/malodumont/beans/Like.class
+amu/m2sir/malodumont/servlet/ServletApi.class
+amu/m2sir/malodumont/beans/MessageService.class
+amu/m2sir/malodumont/beans/UserService.class
+amu/m2sir/malodumont/servlet/ServletMesssage.class
+amu/m2sir/malodumont/servlet/ServletLogin.class
+amu/m2sir/malodumont/cloneTwitter/App.class
+amu/m2sir/malodumont/beans/LikeService.class
+db/HibernateUtil.class

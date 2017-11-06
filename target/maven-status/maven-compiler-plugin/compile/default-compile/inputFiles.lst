@@ -1,0 +1,11 @@
+/home/malo/workspace/cloneTwitter/src/main/java/amu/m2sir/malodumont/beans/MessageService.java
+/home/malo/workspace/cloneTwitter/src/main/java/amu/m2sir/malodumont/cloneTwitter/App.java
+/home/malo/workspace/cloneTwitter/src/main/java/amu/m2sir/malodumont/beans/UserService.java
+/home/malo/workspace/cloneTwitter/src/main/java/amu/m2sir/malodumont/servlet/ServletLogin.java
+/home/malo/workspace/cloneTwitter/src/main/java/db/HibernateUtil.java
+/home/malo/workspace/cloneTwitter/src/main/java/amu/m2sir/malodumont/beans/LikeService.java
+/home/malo/workspace/cloneTwitter/src/main/java/amu/m2sir/malodumont/servlet/ServletMesssage.java
+/home/malo/workspace/cloneTwitter/src/main/java/amu/m2sir/malodumont/beans/User.java
+/home/malo/workspace/cloneTwitter/src/main/java/amu/m2sir/malodumont/beans/Like.java
+/home/malo/workspace/cloneTwitter/src/main/java/amu/m2sir/malodumont/beans/Message.java
+/home/malo/workspace/cloneTwitter/src/main/java/amu/m2sir/malodumont/servlet/ServletApi.java
