@@ -59,7 +59,7 @@
 			type: 'GET',
 		    url: 'http://localhost:9999/api',
 		    data: {
-		    	action : "list"
+		    	action : 'list'
 		    },
 		    success: function (result) {
 		        console.log("L'appel Ajax est une réussite.");
@@ -82,7 +82,7 @@
 			type: 'GET',
 		    url: 'http://localhost:9999/api',
 		    data: {
-		    	action : "remove",
+		    	action : 'remove',
 		    	messageId : id
 		    },
 		    success: function (result) {
@@ -109,7 +109,7 @@
 				type: 'GET',
 			    url: 'http://localhost:9999/api',
 			    data: {
-			    	action : "add"
+			    	action : 'add',
 			    	contenu : input.value
 			    },
 			    success: function (result) {
@@ -132,7 +132,7 @@
 			type: 'GET',
 		    url: 'http://localhost:9999/api',
 		    data: {
-		    	action : "like",
+		    	action : 'like',
 		    	messageId : messageId
 		    },
 		    success: function (result) {
@@ -165,7 +165,7 @@
 			type: 'GET',
 		    url: 'http://localhost:9999/api',
 		    data: {
-		    	action : "likeurs"
+		    	action : 'likeurs'
 		    },
 		    success: function (result) {
 		        console.log("L'appel Ajax est une réussite.");

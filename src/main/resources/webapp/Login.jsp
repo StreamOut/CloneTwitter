@@ -61,34 +61,22 @@
 		console.log("email : "+mail+" pass : "+pwd);
 		jQuery.ajax({
 			type: 'GET',
-		    url: 'http://localhost:9999/api/login',
+		    url: 'http://localhost:9999/api',
 		    data: {
 		    	action : 'login',
-		    	mail : mail,
-		    	pass : pwd
+		    	user : mail,
+		    	pwd : pwd
 		    },
 		    success: function (result) {
 		        console.log("L'appel Ajax est une réussite.");
 		        console.log(result);
-		        /* $.each(result, function(index, element) {
-		        	window.location.assign(element.url);
-		        }); */
-		        jQuery.ajax({
-					type: 'GET',
-				    url: 'http://localhost:9999/message',
-				    success: function (result) {
-				        console.log("L'appel Ajax est une réussite.");
-				        console.log(result);
-				    },
-				    error: function () {
-				        console.log("L'appel Ajax est un échec.");
-				        alert("error");
-				    }
-				});
+		        $.each(result, function(index, element) {
+		        	verify(element.auth);
+		        });
 		    },
 		    error: function () {
 		        console.log("L'appel Ajax est un échec.");
-		        alert("error");
+		        alert("Singin error");
 		    }
 		});
 	}
@@ -102,26 +90,36 @@
 		    },
 		    success: function (result) {
 		        console.log("L'appel Ajax est une réussite.");
-		        /* console.log(result);*/
+		        console.log(result);
 		        /* window.location.assign(result.url); */
-		       jQuery.ajax({
-					type: 'GET',
-				    url: 'http://localhost:9999/message',
-				    success: function (result) {
-				        console.log("L'appel Ajax est une réussite.");
-				        console.log(result);
-				    },
-				    error: function () {
-				        console.log("L'appel Ajax est un échec.");
-				        alert("error");
-				    }
-				});
+		       	/*verify(result);*/
+		         window.location.reload();
+		        console.log(result); 
 		    },
 		    error: function () {
 		        console.log("L'appel Ajax est un échec.");
-		        alert("error");
+		        alert("Registration error");
 		    }
 		});
+	}
+	
+	function verify(auth){
+		if(auth){
+			jQuery.ajax({
+				type: 'GET',
+			    url: 'http://localhost:9999/message',
+			    success: function (result) {
+			        console.log("L'appel Ajax est une réussite.");
+			        window.location.reload();
+			    },
+			    error: function () {
+			        console.log("L'appel Ajax est un échec.");
+			        alert("Verify error");
+			    }
+			});
+		}
+		else 
+			alert(result.message)
 	}
 	
 </script>

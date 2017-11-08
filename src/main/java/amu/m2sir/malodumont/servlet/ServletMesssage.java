@@ -1,6 +1,7 @@
 package amu.m2sir.malodumont.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Map;
 
 import javax.servlet.ServletException;
@@ -19,6 +20,7 @@ import amu.m2sir.malodumont.cloneTwitter.App;
 )
 public class ServletMesssage extends HttpServlet{
 	MessageService messageService = App.messageService;
+	private boolean registration = false;
 	/**
 	 * 
 	 */
@@ -27,12 +29,17 @@ public class ServletMesssage extends HttpServlet{
 	public void doGet(HttpServletRequest req, HttpServletResponse resp){
 		String url;
 		Map<String, String[]> parametres = req.getParameterMap();
-		if(!parametres.isEmpty() && parametres.containsKey("registration"))
-			url = "/Registration.jsp";
 		if(req.getSession().getAttribute("user") != null)
 			url = "/Message.jsp";
-		else
-			url = "/Login.jsp";
+		else if(!parametres.isEmpty() && parametres.containsKey("registration")) {
+			System.out.println("registration");
+			url = "/Registration.jsp";
+			registration = true;
+		}
+		else if(registration)
+			url = "/Registration.jsp";
+		else 
+				url = "/Login.jsp";
 		try {
 			this.getServletContext().getRequestDispatcher(url).forward(req, resp);
 		} catch (ServletException | IOException e) {

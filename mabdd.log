@@ -1,28 +1,105 @@
-/*C15*/SET SCHEMA PUBLIC
+/*C77*/SET SCHEMA PUBLIC
 CREATE TABLE IF NOT EXISTS likes (id int, messageId int, likeur varchar(255))
 CREATE TABLE IF NOT EXISTS message (id int, contenu varchar(255), date varchar(255), auteur varchar(255))
 CREATE TABLE IF NOT EXISTS user (mail varchar(255), pwd varchar(255))
-/*C17*/SET SCHEMA PUBLIC
+/*C79*/SET SCHEMA PUBLIC
 CREATE TABLE IF NOT EXISTS likes (id int, messageId int, likeur varchar(255))
 CREATE TABLE IF NOT EXISTS message (id int, contenu varchar(255), date varchar(255), auteur varchar(255))
 CREATE TABLE IF NOT EXISTS user (mail varchar(255), pwd varchar(255))
-/*C15*/DISCONNECT
-/*C17*/DISCONNECT
-/*C14*/SET SCHEMA PUBLIC
+/*C78*/SET SCHEMA PUBLIC
+INSERT INTO USER VALUES('mdr@mdr.mdr','mdr')
+COMMIT
 DISCONNECT
-/*C16*/SET SCHEMA PUBLIC
+/*C80*/SET SCHEMA PUBLIC
 DISCONNECT
-/*C19*/SET SCHEMA PUBLIC
+/*C77*/DISCONNECT
+/*C76*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C79*/DISCONNECT
+/*C82*/SET SCHEMA PUBLIC
 CREATE TABLE IF NOT EXISTS likes (id int, messageId int, likeur varchar(255))
 CREATE TABLE IF NOT EXISTS message (id int, contenu varchar(255), date varchar(255), auteur varchar(255))
 CREATE TABLE IF NOT EXISTS user (mail varchar(255), pwd varchar(255))
-/*C21*/SET SCHEMA PUBLIC
+/*C84*/SET SCHEMA PUBLIC
+CREATE TABLE IF NOT EXISTS likes (id int, messageId int, likeur varchar(255))
+CREATE TABLE IF NOT EXISTS message (id int, contenu varchar(255), date varchar(255), auteur varchar(255))
+CREATE TABLE IF NOT EXISTS user (mail varchar(255), pwd varchar(255))
+/*C85*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C83*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C82*/DISCONNECT
+/*C81*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C84*/DISCONNECT
+/*C87*/SET SCHEMA PUBLIC
+CREATE TABLE IF NOT EXISTS likes (id int, messageId int, likeur varchar(255))
+CREATE TABLE IF NOT EXISTS message (id int, contenu varchar(255), date varchar(255), auteur varchar(255))
+CREATE TABLE IF NOT EXISTS user (mail varchar(255), pwd varchar(255))
+/*C89*/SET SCHEMA PUBLIC
+CREATE TABLE IF NOT EXISTS likes (id int, messageId int, likeur varchar(255))
+CREATE TABLE IF NOT EXISTS message (id int, contenu varchar(255), date varchar(255), auteur varchar(255))
+CREATE TABLE IF NOT EXISTS user (mail varchar(255), pwd varchar(255))
+/*C88*/SET SCHEMA PUBLIC
+INSERT INTO USER VALUES('ggf','kjfjf')
+COMMIT
+/*C89*/DISCONNECT
+/*C87*/DISCONNECT
+/*C88*/DISCONNECT
+/*C86*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C91*/SET SCHEMA PUBLIC
+CREATE TABLE IF NOT EXISTS likes (id int, messageId int, likeur varchar(255))
+CREATE TABLE IF NOT EXISTS message (id int, contenu varchar(255), date varchar(255), auteur varchar(255))
+CREATE TABLE IF NOT EXISTS user (mail varchar(255), pwd varchar(255))
+/*C93*/SET SCHEMA PUBLIC
+CREATE TABLE IF NOT EXISTS likes (id int, messageId int, likeur varchar(255))
+CREATE TABLE IF NOT EXISTS message (id int, contenu varchar(255), date varchar(255), auteur varchar(255))
+CREATE TABLE IF NOT EXISTS user (mail varchar(255), pwd varchar(255))
+/*C92*/SET SCHEMA PUBLIC
+INSERT INTO USER VALUES('dggd','dggdgr')
+COMMIT
+INSERT INTO MESSAGE VALUES(3,'fjfjfj','21:01 08/11/2017','dggd')
+COMMIT
+INSERT INTO MESSAGE VALUES(4,'sqdqfdr','21:01 08/11/2017','dggd')
+COMMIT
+/*C93*/DISCONNECT
+/*C92*/DISCONNECT
+/*C91*/DISCONNECT
+/*C90*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C95*/SET SCHEMA PUBLIC
 CREATE TABLE IF NOT EXISTS likes (id int, messageId int, likeur varchar(255))
 CREATE TABLE IF NOT EXISTS message (id int, contenu varchar(255), date varchar(255), auteur varchar(255))
 CREATE TABLE IF NOT EXISTS user (mail varchar(255), pwd varchar(255))
 DISCONNECT
-/*C19*/DISCONNECT
-/*C18*/SET SCHEMA PUBLIC
+/*C94*/SET SCHEMA PUBLIC
 DISCONNECT
-/*C20*/SET SCHEMA PUBLIC
+/*C97*/SET SCHEMA PUBLIC
+CREATE TABLE IF NOT EXISTS likes (id int, messageId int, likeur varchar(255))
+CREATE TABLE IF NOT EXISTS message (id int, contenu varchar(255), date varchar(255), auteur varchar(255))
+CREATE TABLE IF NOT EXISTS user (mail varchar(255), pwd varchar(255))
+/*C99*/SET SCHEMA PUBLIC
+CREATE TABLE IF NOT EXISTS likes (id int, messageId int, likeur varchar(255))
+CREATE TABLE IF NOT EXISTS message (id int, contenu varchar(255), date varchar(255), auteur varchar(255))
+CREATE TABLE IF NOT EXISTS user (mail varchar(255), pwd varchar(255))
+/*C98*/SET SCHEMA PUBLIC
+INSERT INTO USER VALUES('ghdwxg','gdfgdg')
+COMMIT
+INSERT INTO MESSAGE VALUES(5,'gddgf','21:14 08/11/2017','ghdwxg')
+COMMIT
+DELETE FROM MESSAGE WHERE ID=5 AND CONTENU='gddgf' AND DATE='21:14 08/11/2017' AND AUTEUR='ghdwxg'
+COMMIT
+DELETE FROM MESSAGE WHERE ID=1 AND CONTENU='vufncfec' AND DATE='19:14 01/11/2017' AND AUTEUR='lol@lol.fr'
+COMMIT
+DELETE FROM MESSAGE WHERE ID=2 AND CONTENU='njcssjdc' AND DATE='19:14 01/11/2017' AND AUTEUR='lol@lol.fr'
+COMMIT
+DELETE FROM MESSAGE WHERE ID=3 AND CONTENU='fjfjfj' AND DATE='21:01 08/11/2017' AND AUTEUR='dggd'
+COMMIT
+DELETE FROM MESSAGE WHERE ID=4 AND CONTENU='sqdqfdr' AND DATE='21:01 08/11/2017' AND AUTEUR='dggd'
+COMMIT
 DISCONNECT
+/*C97*/DISCONNECT
+/*C96*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C99*/DISCONNECT

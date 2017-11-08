@@ -57,9 +57,9 @@
 	function loadMessage(){
 		jQuery.ajax({
 			type: 'GET',
-		    url: 'http://localhost:9999/message/api',
+		    url: 'http://localhost:9999/api',
 		    data: {
-		    	action : "list"
+		    	action : 'list'
 		    },
 		    success: function (result) {
 		        console.log("L'appel Ajax est une réussite.");
@@ -80,9 +80,9 @@
 	function onSuppClick (id) {
 		jQuery.ajax({
 			type: 'GET',
-		    url: 'http://localhost:9999/message/api',
+		    url: 'http://localhost:9999/api',
 		    data: {
-		    	action : "remove",
+		    	action : 'remove',
 		    	messageId : id
 		    },
 		    success: function (result) {
@@ -107,9 +107,9 @@
 		if(event.keyCode == 13){
 			jQuery.ajax({
 				type: 'GET',
-			    url: 'http://localhost:9999/message/api',
+			    url: 'http://localhost:9999/api',
 			    data: {
-			    	action : "add"
+			    	action : 'add',
 			    	contenu : input.value
 			    },
 			    success: function (result) {
@@ -130,9 +130,9 @@
 	function onLikeClick(messageId){
 		jQuery.ajax({
 			type: 'GET',
-		    url: 'http://localhost:9999/message/api',
+		    url: 'http://localhost:9999/api',
 		    data: {
-		    	action : "like",
+		    	action : 'like',
 		    	messageId : messageId
 		    },
 		    success: function (result) {
@@ -163,9 +163,9 @@
 	function addLikeurs(){
 		jQuery.ajax({
 			type: 'GET',
-		    url: 'http://localhost:9999/message/api',
+		    url: 'http://localhost:9999/api',
 		    data: {
-		    	action : "likeurs"
+		    	action : 'likeurs'
 		    },
 		    success: function (result) {
 		        console.log("L'appel Ajax est une réussite.");

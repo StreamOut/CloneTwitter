@@ -31,9 +31,12 @@ public class UserService {
 				if (user != null && pwd.equals(user.getPwd())) {
 					req.getSession().setAttribute("user", username);
 					objectBuilder.add("user", username);
+					objectBuilder.add("auth", "true");
 				}
-				else
+				else {
 					objectBuilder.add("message", "Mail ou Mot de passe incorecte");
+					objectBuilder.add("auth", "");
+				}
 			  transaction.commit();
 		  } catch (Exception ex) {
 		    // Log the exception here
@@ -48,6 +51,7 @@ public class UserService {
 	}
 	
 	public JsonArrayBuilder registration(String mail, String pwd, HttpServletRequest req){
+		System.out.println("lol");
 		User user = new User(mail, pwd);
 		JsonArrayBuilder arrayBuilder = Json.createArrayBuilder();
 		JsonObjectBuilder objectBuilder =Json.createObjectBuilder();
@@ -58,12 +62,16 @@ public class UserService {
 		    // The real work is here
 			  User userOld = (User) session.get(User.class, mail);
 			  if(userOld == null){
+				  System.out.println("okay");
 				  session.save(user);
 				  req.getSession().setAttribute("user", mail);
 				  objectBuilder.add("user", mail);
+				  objectBuilder.add("auth", "true");
 			  }
-			  else
+			  else {
 				  objectBuilder.add("message", "Ce Mail est déjà utilisé");
+				  objectBuilder.add("auth", "");
+			  }
 			  transaction.commit();
 		  } catch (Exception ex) {
 		    // Log the exception here
